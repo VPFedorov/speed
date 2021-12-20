@@ -139,9 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AnnualReport.cpp" />
     <ClCompile Include="Global.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AnnualReport.h" />
     <ClInclude Include="Global.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
