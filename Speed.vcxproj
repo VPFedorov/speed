@@ -139,12 +139,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <ClCompile Include="ExpenseInputScreen.cpp" />
+    <ClCompile Include="AnnualReport.cpp" />
     <ClCompile Include="Global.cpp" />
     <ClCompile Include="OrderInputList.cpp" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <ClInclude Include="ExpenseInputScreen.h" />
+    <ClInclude Include="AnnualReport.h" />
     <ClInclude Include="Global.h" />
     <ClInclude Include="OrderInputList.h" />
   </ItemGroup>
