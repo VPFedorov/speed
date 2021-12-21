@@ -3,7 +3,7 @@
 #include <vector>
 #include <list>
 #include <string>
-#include <numeric> //для accumulate()
+#include <numeric> //для  accumulate()
 #include <cctype>
 
 using namespace std;
