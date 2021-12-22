@@ -8,13 +8,13 @@
 #include <list>
 #include <string>
 #pragma once
-#include <numeric> //РґР»В¤ accumulate()
+#include <numeric> //дл¤ accumulate()
 #include <cctype>
 using namespace std;
 
-//////////////////В Р»Р°СЃСЃ UserInterface//////////////////////
-//в€љР»Р°РІРЅС‹Р№ РєР»Р°СЃСЃ РґР»В¤ Р·Р°РїСѓСЃРєР° РїСЂРёР»РѕР¶РµРЅРёВ¤:
-//СЌС‚РѕС‚ РєР»Р°СЃСЃ РѕРїСЂРµРґРµР»В¤РµС‚ РІР·Р°РёРјРѕРґРµР№СЃС‚РІРёРµ СЋР·РµСЂР° СЃ РїСЂРѕРіСЂР°РјРјРѕР№.
+////////////////// ласс UserInterface//////////////////////
+//vлавный класс дл¤ запуска приложени¤:
+//этот класс определ¤ет взаимодействие юзера с программой.
 class UserInterface
 {
 private:
@@ -30,4 +30,4 @@ public:
 	UserInterface();
 	~UserInterface();
 	void interact();
-}; // РєРѕРЅРµС† РєР»Р°СЃСЃР° userInterfac
+}; // конец класса userInterfac

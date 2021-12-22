@@ -1,4 +1,5 @@
 // lordApp.cpp
+
 #include "Global.h"
 #include "AnnualReport.h"
 #include "Expense.h"
@@ -11,9 +12,12 @@
 int main()
 {
 	//Функция setlocale() задаёт локализацию программы.
-	setlocale(LC_ALL, "rus");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	
+	//setlocale(LC_ALL, "rus");
 	UserInterface theUserInterface;
 	theUserInterface.interact();
-	return 0;
+	return 0; 
 }
 ////////////////////конец файла lordApp.cpp////////////////

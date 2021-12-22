@@ -2,10 +2,10 @@
 ///////////метод класса OrderInputList//////////////////
 void OrderInputList::setOrder() // добавить данные о заказе
 {
-	cout << "¬ведите номер заказа: " << endl;
+	cout << "¬ведите номер заказа: " << endl; 
 	cin >> num;
 	cin.ignore(80, '\n');
-	cout << "¬ведите день: " << endl;
+	cout << "¬ведите день " << endl;
 	do {
 		cin >> day;
 		cin.ignore(80, '\n');
@@ -18,9 +18,9 @@ void OrderInputList::setOrder() // добавить данные о заказе
 	} while (month > 12);
 
 
-	cout << "¬ведите им€ отправител€ (ƒ€д€ ‘едор): " << endl;
+	cout << "¬ведите им€ отправител€: " << endl;
 	getaLine(ship);
-	cout << "¬ведите им€ получател€ (ƒ€д€ ‘едор): " << endl;
+	cout << "¬ведите им€ получател€: " << endl;
 	getaLine(cons);
 	cout << "¬ведите цену: " << endl;
 	cin >> pr;
