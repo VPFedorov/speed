@@ -1,12 +1,12 @@
 #pragma once
 #include "ExpenseRecord.h"
 
-////////////////РєР»Р°СЃСЃ ExpenseInputScreen///////////////////
-//В Р»Р°СЃСЃ РґР»В¤ РІРІРѕРґР° СЂР°СЃС…РѕРґРѕРІ
+////////////////класс ExpenseInputScreen///////////////////
+// ласс дл¤ ввода расходов
 class ExpenseInputScreen
 {
 private:
-	ExpenseRecord* ptrExpenseRecord; // Р·Р°РїРёСЃСЊ Рѕ СЂР°СЃС…РѕРґР°С…
+	ExpenseRecord* ptrExpenseRecord; // запись о расходах
 public:
 	ExpenseInputScreen(ExpenseRecord*);
 	void setExpense();

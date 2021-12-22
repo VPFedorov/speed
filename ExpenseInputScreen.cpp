@@ -1,10 +1,10 @@
 #include "ExpenseInputScreen.h"
-//////////////РјРµС‚РѕРґС‹ РєР»Р°СЃСЃР° ExpenseInputScreen/////////////
+//////////////методы класса ExpenseInputScreen/////////////
 
-// РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
+// конструктор
 ExpenseInputScreen::ExpenseInputScreen(ExpenseRecord* per) : ptrExpenseRecord(per)
 {
-	/*РїСѓСЃС‚Рѕ*/
+	/*пусто*/
 }
 //------------------------------------------------------
 void ExpenseInputScreen::setExpense()
@@ -12,26 +12,26 @@ void ExpenseInputScreen::setExpense()
 	int month, day;
 	string category, payee;
 	float amount;
-	cout << "В¬РІРµРґРёС‚Рµ РјРµСЃВ¤С† (1-12): ";
+	cout << "¬ведите мес¤ц (1-12): ";
 	do
 		cin >> month;
 	while (month > 12);
 	cin.ignore(80, '\n');
-	cout << "В¬РІРµРґРёС‚Рµ РґРµРЅСЊ (1-31): ";
+	cout << "¬ведите день (1-31): ";
 	do
 		cin >> day;
 	while (day > 31);
 	cin.ignore(80, '\n');
-	cout << "В¬РІРµРґРёС‚Рµ РєР°С‚РµРіРѕСЂРёСЋ СЂР°СЃС…РѕРґРѕРІ (вЂ“РµРјРѕРЅС‚, РЊР°Р»РѕРіРё): ";
+	cout << "¬ведите категорию расходов (–емонт, Ќалоги): ";
 	getaLine(category);
-	cout << "В¬РІРµРґРёС‚Рµ РїРѕР»СѓС‡Р°С‚РµР»В¤ (С•СЂРѕСЃС‚РѕРєРІР°С€РёРЅРѕРЃР»РµРєС‚СЂРѕвЂ”Р±С‹С‚): ";
+	cout << "¬ведите получател¤ (ѕростоквашиноЁлектро—быт): ";
 	getaLine(payee);
-	cout << "В¬РІРµРґРёС‚Рµ СЃСѓРјРјСѓ (39.95): ";
+	cout << "¬ведите сумму (39.95): ";
 	cin >> amount;
 	cin.ignore(80, '\n');
-	// СЃРѕР·РґР°РµРј РЅРѕРІС‹Р№ СЂР°СЃС…РѕРґ
+	// создаем новый расход
 	Expense* ptrExpense = new Expense(month, day, category, payee, amount);
-	// РІСЃС‚Р°РІР»В¤РµРј СЂР°СЃС…РѕРґ РІ СЃРїРёСЃРѕРє РІСЃРµС… СЂР°СЃС…РѕРґРѕРІ
+	// вставл¤ем расход в список всех расходов
 	ptrExpenseRecord->insertExp(ptrExpense);
 }
 //---------------------------------------------------------

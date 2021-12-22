@@ -1,24 +1,24 @@
 #include "AnnualReport.h"
 
-////////////////РјРµС‚РѕРґС‹ РєР»Р°СЃСЃР° AnnualReport/////////////////
-//РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
+////////////////методы класса AnnualReport/////////////////
+//Конструктор
 AnnualReport::AnnualReport(ExpenseRecord* pER, OrderList* sP) : ptrER(pER), summa(sP)
-{ /* РїСѓСЃС‚Рѕ */
+{ /* пусто */
 }
 //---------------------------------------------------------
 void AnnualReport::display()
 {
-	cout << "Р“РѕРґРѕРІРѕР№ РѕС‚С‡РµС‚\n--------------\n" << endl;
-	cout << "Р”РѕС…РѕРґС‹\n" << endl;
-	cout << "\tР”РѕС…РѕРґ СЃРѕ РІСЃРµС… Р·Р°РєР°Р·РѕРІ:\t\t";
+	cout << "Годовой отчет\n--------------\n" << endl;
+	cout << "Доходы\n" << endl;
+	cout << "\tДоход со всех заказов:\t\t";
 	income = summa->getSumPrice();
 	cout << income << endl;
 
-	cout << "Р Р°СЃС…РѕРґС‹\n" << endl;
+	cout << "Расходы\n" << endl;
 	expenses = ptrER->displaySummary();
-	cout << "РЎСѓРјРјР° СЂР°СЃС…РѕРґРѕРІ:\t\t";
+	cout << "Сумма расходов:\t\t";
 	cout << expenses << endl;
-	// РІС‹С‡РёСЃР»СЏРµРј РїСЂРёР±С‹Р»СЊРЅРѕСЃС‚СЊ
-	cout << "\nРџСЂРёР±С‹Р»СЊ:\t\t\t" << (income - expenses) << endl;
+	// вычисляем прибыльность
+	cout << "\nПрибыль:\t\t\t" << (income - expenses) << endl;
 }
 //---------------------------------------------------------

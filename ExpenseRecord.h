@@ -4,20 +4,20 @@
 #include <vector>
 #include <list>
 #include <string>
-#include <numeric> //РґР»В¤ accumulate()
+#include <numeric> //дл¤ accumulate()
 #include <cctype>
 using namespace std;
-///////////////////РєР»Р°СЃСЃ ExpenseRecord/////////////////////
-//В Р»Р°СЃСЃ Р·Р°РїРёСЃРµР№ Рѕ Р·Р°С‚СЂР°С‚Р°С…
+///////////////////класс ExpenseRecord/////////////////////
+// ласс записей о затратах
 class ExpenseRecord
 {
 private:
-	vector<Expense*> vectPtrsExpenses; //РІРµРєС‚РѕСЂ СѓРєР°Р·Р°С‚РµР»РµР№ РЅР° СЂР°СЃС…РѕРґС‹
+	vector<Expense*> vectPtrsExpenses; //вектор указателей на расходы
 	vector<Expense*>::iterator iter;
 public:
 	~ExpenseRecord();
 
 	void insertExp(Expense*);
 	void display();
-	float displaySummary(); // РЅСѓР¶РЅРѕ РґР»В¤ РіРѕРґРѕРІРѕРіРѕ РѕС‚С‡РµС‚Р°
+	float displaySummary(); // нужно дл¤ годового отчета
 };

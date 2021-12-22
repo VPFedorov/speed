@@ -3,24 +3,24 @@
 #include <vector>
 #include <list>
 #include <string>
-#include <numeric> //РґР»СЏ accumulate()
+#include <numeric> //для accumulate()
 #include <cctype>
 #include "Global.h"
-///////////////////////РєР»Р°СЃСЃ Expense///////////////////////
-//РљР»Р°СЃСЃ Р·Р°С‚СЂР°С‚
+///////////////////////класс Expense///////////////////////
+//Класс затрат
 class Expense
 {
 public:
-	int month, day; // РјРµСЃСЏС† Рё РґРµРЅСЊ СѓРїР»Р°С‚С‹ СЂР°СЃС…РѕРґРѕРІ
-	string category; // РєР°С‚РµРіРѕСЂРёСЏ СЂР°СЃС…РѕРґРѕРІ
-	string payee; // РєРѕРјСѓ РїР»Р°С‚РёРј
-	float amount; // СЃРєРѕР»СЊРєРѕ РїР»Р°С‚РёРј
+	int month, day; // месяц и день уплаты расходов
+	string category; // категория расходов
+	string payee; // кому платим
+	float amount; // сколько платим
 //	Expense(int m, int d, string c, string p, float a) : month(m), day(d), category(c), payee(p), amount(a)
 	//{ }
 	Expense(int m, int d, string c, string p, float a) :
 		month(m), day(d), category(c), payee(p), amount(a)
 	{
-		/* С‚СѓС‚ РїСѓСЃС‚Рѕ! */
+		/* тут пусто! */
 	}
 };
 

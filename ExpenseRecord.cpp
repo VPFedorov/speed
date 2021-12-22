@@ -1,9 +1,9 @@
 #include "ExpenseRecord.h"
 
-//////////////////РјРµС‚РѕРґС‹ РєР»Р°СЃСЃР° expenseRecord//////////////
-ExpenseRecord::~ExpenseRecord() // РґРµСЃС‚СЂСѓРєС‚РѕСЂ
-{ // СѓРґР°Р»РёС‚СЊ РѕР±СЉРµРєС‚С‹ expense
-// СѓРґР°Р»РёС‚СЊ СѓРєР°Р·Р°С‚РµР»Рё РЅР° РІРµРєС‚РѕСЂ
+//////////////////методы класса expenseRecord//////////////
+ExpenseRecord::~ExpenseRecord() // деструктор
+{ // удалить объекты expense
+// удалить указатели на вектор
 	while (!vectPtrsExpenses.empty())
 	{
 		iter = vectPtrsExpenses.begin();
@@ -18,17 +18,17 @@ void ExpenseRecord::insertExp(Expense* ptrExp)
 	vectPtrsExpenses.push_back(ptrExp);
 }
 //---------------------------------------------------------
-void ExpenseRecord::display() // СЂР°СЃРїРµС‡Р°С‚С‹РІР°РµРј РІСЃРµ СЂР°СЃС…РѕРґС‹
+void ExpenseRecord::display() // распечатываем все расходы
 {
-	cout << "\nР”Р°С‚Р°\tРџРѕР»СѓС‡Р°С‚РµР»СЊ\tРЎСѓРјРјР°\tРљР°С‚РµРіРѕСЂРёСЏ\n"
+	cout << "\nДата\tПолучатель\tСумма\tКатегория\n"
 		<< "----------------------------------------\n" << endl;
-	if (vectPtrsExpenses.size() == 0) // Р’ РєРѕРЅС‚РµР№РЅРµСЂРµ РЅРµС‚ СЂР°СЃС…РѕРґРѕРІ
-		cout << "***Р Р°СЃС…РѕРґРѕРІ РЅРµС‚***\n" << endl;
+	if (vectPtrsExpenses.size() == 0) // В контейнере нет расходов
+		cout << "***Расходов нет***\n" << endl;
 	else
 	{
 		iter = vectPtrsExpenses.begin();
 		while (iter != vectPtrsExpenses.end())
-		{ // СЂР°СЃРїРµС‡Р°С‚С‹РІР°РµРј РІСЃРµ СЂР°СЃС…РѕРґС‹
+		{ // распечатываем все расходы
 			cout << (*iter)->month << '/' << (*iter)->day << '\t' << (*iter)->payee << '\t' << '\t';
 			cout << (*iter)->amount << '\t' << (*iter)->category << endl;
 			iter++;
@@ -37,22 +37,22 @@ void ExpenseRecord::display() // СЂР°СЃРїРµС‡Р°С‚С‹РІР°РµРј РІСЃРµ СЂР°СЃС…РѕРґС
 	}
 }
 //--------------------------------------------------------
-// РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РїСЂРё СЃРѕСЃС‚Р°РІР»РµРЅРёРё РіРѕРґРѕРІРѕРіРѕ РѕС‚С‡РµС‚Р°
-// РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РїСЂРё СЃРѕСЃС‚Р°РІР»РµРЅРёРё РіРѕРґРѕРІРѕРіРѕ РѕС‚С‡РµС‚Р°
+// используется при составлении годового отчета
+// используется при составлении годового отчета
 float ExpenseRecord::displaySummary()
 {
-	float totalExpenses = 0; // РЎСѓРјРјР° РїРѕ РІСЃРµРј РєР°С‚РµРіРѕСЂРёСЏРј СЂР°СЃС…РѕРґРѕРІ
+	float totalExpenses = 0; // Сумма по всем категориям расходов
 	if (vectPtrsExpenses.size() == 0)
 	{
-		cout << "\tР’СЃРµ РєР°С‚РµРіРѕСЂРёРё\t0\n";
+		cout << "\tВсе категории\t0\n";
 		return 0;
 	}
 	iter = vectPtrsExpenses.begin();
 	while (iter != vectPtrsExpenses.end())
 	{
-		//РІС‹РІРѕРґРёРј РЅР° СЌРєСЂР°РЅ РєР°С‚РµРіРѕСЂРёРё СЂР°СЃС…РѕРґРѕРІ
+		//выводим на экран категории расходов
 		cout << '\t' << ((*iter)->category) << '\t' << ((*iter)->amount) << endl;
-		totalExpenses += (*iter)->amount; //РїРѕРґСЃС‡РёС‚С‹РІР°РµРј РІСЃРµ СЂР°СЃС…РѕРґС‹
+		totalExpenses += (*iter)->amount; //подсчитываем все расходы
 		iter++;
 	}
 	return totalExpenses;

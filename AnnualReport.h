@@ -6,21 +6,21 @@
 #include <vector>
 #include <list>
 #include <string>
-#include <numeric> //РґР»В¤ accumulate()
+#include <numeric> //дл¤ accumulate()
 #include <cctype>
 using namespace std;
-//////////////////РєР»Р°СЃСЃ AnnualReport///////////////////////
-//В Р»Р°СЃСЃ РіРѕРґРѕРІРѕРіРѕ РѕС‚С‡РµС‚Р°
+//////////////////класс AnnualReport///////////////////////
+// ласс годового отчета
 class AnnualReport
 {
 private:
-	//RentRecord* ptrRR; // Р·Р°РїРёСЃРё РґРѕС…РѕРґРѕРІ
-	ExpenseRecord* ptrER; // Р·Р°РїРёСЃРё СЂР°СЃС…РѕРґРѕРІ
-	float expenses, income; // СЃСѓРјРјС‹ РґРѕС…РѕРґРѕРІ Рё СЂР°СЃС…РѕРґРѕРІ
+	//RentRecord* ptrRR; // записи доходов
+	ExpenseRecord* ptrER; // записи расходов
+	float expenses, income; // суммы доходов и расходов
 	OrderList* summa;
 	//float saa;
 public:
 	AnnualReport(ExpenseRecord*, OrderList*);
-	void display(); // РѕС‚РѕР±СЂР°Р¶РµРЅРёРµ РіРѕРґРѕРІРѕРіРѕ РѕС‚С‡РµС‚Р°
+	void display(); // отображение годового отчета
 };
 
