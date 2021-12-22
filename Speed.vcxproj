@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <ClCompile Include="ExpenseInputScreen.cpp" />
     <ClCompile Include="AnnualReport.cpp" />
     <ClCompile Include="Global.cpp" />
@@ -151,6 +152,16 @@
     <ClInclude Include="AnnualReport.h" />
     <ClInclude Include="Global.h" />
     <ClInclude Include="OrderInputList.h" />
+
+    <ClCompile Include="ExpenseRecord.cpp" />
+    <ClCompile Include="Global.cpp" />
+    <ClCompile Include="UserInterface.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ExpenseRecord.h" />
+    <ClInclude Include="Global.h" />
+    <ClInclude Include="UserInterface.h" />
+
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
