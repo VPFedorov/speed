@@ -1,6 +1,6 @@
 #include "Global.h"
 #include "OrderList.h"
-#include "OrderInputScreen.h"
+#include "OrderInputList.h"
 #include "ExpenseRecord.h"
 #include "ExpenseInputScreen.h"
 #include "AnnualReport.h"
@@ -19,7 +19,7 @@ class UserInterface
 {
 private:
 	OrderList* ptrOrderList;
-	OrderInputScreen* ptrOrderInputScreen;
+	OrderInputList* ptrOrderInputScreen;
 	ExpenseRecord* ptrExpenseRecord;
 	ExpenseInputScreen* ptrExpenseInputScreen;
 	AnnualReport* ptrAnnualReport;

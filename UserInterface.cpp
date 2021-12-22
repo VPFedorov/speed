@@ -32,7 +32,7 @@ void UserInterface::interact()
 				//экраны ввода существуют только во время их
 				//использования
 			case 't': ptrOrderInputScreen =
-				new OrderInputScreen(ptrOrderList);
+				new OrderInputList(ptrOrderList);
 				ptrOrderInputScreen->setOrder();
 				delete ptrOrderInputScreen;
 				break;

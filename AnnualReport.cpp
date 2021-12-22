@@ -11,7 +11,7 @@ void AnnualReport::display()
 	cout << "Годовой отчет\n--------------\n" << endl;
 	cout << "Доходы\n" << endl;
 	cout << "\tДоход со всех заказов:\t\t";
-	income = summa->getSumPrise();
+	income = summa->getSumPrice();
 	cout << income << endl;
 
 	cout << "Расходы\n" << endl;

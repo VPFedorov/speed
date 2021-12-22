@@ -139,29 +139,32 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <ClCompile Include="ExpenseInputScreen.cpp" />
+    <!-- <<<<<<< HEAD -->
+    <!-- <<<<<<< HEAD -->
+    <!-- jjjj -->
     <ClCompile Include="AnnualReport.cpp" />
-    <ClCompile Include="Global.cpp" />
-    <ClCompile Include="OrderInputList.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-<<<<<<< HEAD
-    <ClInclude Include="ExpenseInputScreen.h" />
-    <ClInclude Include="AnnualReport.h" />
-    <ClInclude Include="Global.h" />
-    <ClInclude Include="OrderInputList.h" />
-
+    <ClCompile Include="ExpenseInputScreen.cpp" />
     <ClCompile Include="ExpenseRecord.cpp" />
+    <ClCompile Include="Glavn.cpp" />
+    <!-- <ClCompile Include="Glavn.cpp" /> -->
     <ClCompile Include="Global.cpp" />
+    <!-- <ClCompile Include="Header.cpp" /> -->
+    <ClCompile Include="Order.cpp" />
+    <ClCompile Include="OrderInputList.cpp" />
+    <ClCompile Include="OrderList.cpp" />
     <ClCompile Include="UserInterface.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AnnualReport.h" />
+    <ClInclude Include="Expense.h" />
+    <ClInclude Include="ExpenseInputScreen.h" />
     <ClInclude Include="ExpenseRecord.h" />
     <ClInclude Include="Global.h" />
+    <ClInclude Include="Header.h" />
+    <ClInclude Include="Order.h" />
+    <ClInclude Include="OrderInputList.h" />
+    <ClInclude Include="OrderList.h" />
     <ClInclude Include="UserInterface.h" />
-
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
