@@ -3,12 +3,12 @@
 #include <vector>
 #include <list>
 #include <string>
-#include <numeric> //дл§  accumulate()
+#include <numeric> //дл€  accumulate()
 #include <cctype>
 
 using namespace std;
 //////////////////// класс Order (заказы) //////////////////
-//Эн хранит им§ жильца и номер апартаментов, которые он арендует.
+//’ранит информацию о заказах (номер, дата, отправитель, получатель, стоимость) 
 class Order
 {
 private:
@@ -16,17 +16,14 @@ private:
 	string consignee; //грузополучатель
 	int number; // номер заказа
 	float price; //стоимость заказа
-	int month, day; // мес§ц и день заказа
-//	float sumPrice;
-	// здесь может быть проча§ информаци§ о жильце
-	// (телефон и т.п.)
+	int month, day; // мес€ц и день заказа
 public:
 	Order(int num, int dated, int datem, string ship, string cons, float price);
 	~Order();
 	int getNumber(); //возвращает номер заказа
 	int getDay();  //возвращает день заказа
-	int getMonth();	//возвращает мес§ц заказа
+	int getMonth();	//возвращает мес€ц заказа
 	float getPrice();  //возвращает стоимость заказа
-	string getCons();  //возвращает грузополучател§
-	string getShip(); //возвращает грузоотправител§
+	string getCons();  //возвращает грузополучател€
+	string getShip(); //возвращает грузоотправител€
 };

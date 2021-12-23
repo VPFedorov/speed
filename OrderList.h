@@ -9,14 +9,14 @@ using namespace std;
 #include "Order.h"
 
 ///////////////////класс OrderList////////////////////////
-//класс OrderList — список всех жильцов.
+//класс OrderList — список всех заказов.
 //Он содержит множество указателей на класс Order
 // и оперирует ими при выводе
 class OrderList
 {
 private:
-	// установить указатели на жильцов
-	list <Order*> setPtrsTens; // указатели на класс жильцов
+	// установить указатели на заказ
+	list <Order*> setPtrsOrd; // указатели на класс жильцов
 	list <Order*>::iterator iter; //итератор
 
 public:
