@@ -12,26 +12,26 @@ void ExpenseInputScreen::setExpense()
 	int month, day;
 	string category, payee;
 	float amount;
-	cout << "ђведите мес§ц (1-12): ";
+	cout << "¬ведите мес€ц (1-12): ";
 	do
 		cin >> month;
 	while (month > 12);
 	cin.ignore(80, '\n');
-	cout << "ђведите день (1-31): ";
+	cout << "¬ведите день (1-31): ";
 	do
 		cin >> day;
 	while (day > 31);
 	cin.ignore(80, '\n');
-	cout << "ђведите категорию расходов (Цемонт, Налоги): ";
+	cout << "¬ведите категорию расходов (ремонт, налоги): ";
 	getaLine(category);
-	cout << "ђведите получател§ (Њростоквашино®лектроЧбыт): ";
+	cout << "¬ведите получател€: ";
 	getaLine(payee);
-	cout << "ђведите сумму (39.95): ";
+	cout << "¬ведите сумму (39.95): ";
 	cin >> amount;
 	cin.ignore(80, '\n');
 	// создаем новый расход
 	Expense* ptrExpense = new Expense(month, day, category, payee, amount);
-	// вставл§ем расход в список всех расходов
+	// вставл€ем расход в список всех расходов
 	ptrExpenseRecord->insertExp(ptrExpense);
 }
 //---------------------------------------------------------
